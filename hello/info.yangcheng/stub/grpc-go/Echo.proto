@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package hello.info.yangcheng;
+
+option go_package="github.com/yangcheng/{{ repo }}/hello/info.yangcheng/grpc-go/stubs";
+
+
+service Echo {
+    rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+
+message HelloRequest {
+    string msg = 1;
+}
+message HelloReply {
+    string msg = 1;
+    string code = 2;
+}
